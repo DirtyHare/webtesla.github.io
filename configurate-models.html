@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конфигуратор Tesla Model 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">Tesla</a></div>
+            <ul class="nav-links">
+                <li><a href="model-s.html">Model S</a></li>
+                <li><a href="index.html">Model 3</a></li>
+                <li><a href="model-x.html">Model X</a></li>
+                <li><a href="model-y.html">Model Y</a></li>
+            </ul>
+            <div class="menu-btn">Меню</div>
+        </nav>
+    </header>
+
+    <section class="configurator-section">
+        <div class="configurator-container">
+            <div class="car-preview">
+                <img id="car-image"
+                    src="https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY36,$PPSW,$WY19C,$INPB0&view=FRONT34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&"
+                    alt="Model 3">
+            </div>
+            <div class="config-options">
+                <h1>Model 3</h1>
+
+                <!-- Выбор цвета кузова -->
+                <div class="option">
+                    <h2>Цвет кузова</h2>
+                    <div class="color-options">
+                        <div class="color-choice">
+                            <button class="color-btn" data-color="white" data-cost="0"
+                                style="background-color: #fff;"></button>
+                            <span>Белый жемчуг (включено)</span>
+                        </div>
+                        <div class="color-choice">
+                            <button class="color-btn" data-color="black" data-cost="1000"
+                                style="background-color: #000;"></button>
+                            <span>Чёрный металлик (+$1000)</span>
+                        </div>
+                        <div class="color-choice">
+                            <button class="color-btn" data-color="red" data-cost="2000"
+                                style="background-color: #e82127;"></button>
+                            <span>Красный (+$2000)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Выбор интерьера -->
+                <div class="option">
+                    <h2>Интерьер</h2>
+                    <div class="interior-options">
+                        <div class="interior-choice">
+                            <button class="interior-btn" data-interior="black" data-cost="0">Чёрный</button>
+                            <span>Включено</span>
+                        </div>
+                        <div class="interior-choice">
+                            <button class="interior-btn" data-interior="white" data-cost="1500">Белый</button>
+                            <span>+$1500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Итоговая стоимость -->
+                <div class="total-cost">
+                    <h3>Итоговая стоимость: <span id="total-price">$39,990</span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Создано Сурикатом — Frontend разработчик</p>
+            <p><a href="mailto:kanaev-2003@mail.ru">kanaev-2003@mail.ru</a> | <a href="https://github.com/DirtyHare">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

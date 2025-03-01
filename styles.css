@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    background: #000;
+    line-height: 1.6;
+}
+
+/* Навигация */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e82127;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Геро-секция */
+.hero {
+    height: 100vh;
+    background: no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0 10px;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #000;
+}
+
+.btn:hover {
+    background: #e82127;
+    border-color: #e82127;
+}
+
+/* Секция характеристик */
+.features {
+    padding: 60px 40px;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Конфигуратор */
+.configurator-section {
+    padding: 100px 40px 60px;
+    background: #fff;
+    color: #000;
+    min-height: 100vh;
+}
+
+.configurator-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.car-preview {
+    flex: 2;
+}
+
+.car-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.config-options {
+    flex: 1;
+    text-align: left;
+}
+
+.config-options h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.option {
+    margin: 30px 0;
+}
+
+.option h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.color-options, .interior-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.color-choice, .interior-choice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-btn.active {
+    border-color: #e82127;
+}
+
+.interior-btn {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    background: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.interior-btn.active {
+    border-color: #e82127;
+    background: #e82127;
+    color: #fff;
+}
+
+.color-choice span, .interior-choice span {
+    font-size: 16px;
+    color: #333;
+}
+
+.total-cost {
+    margin-top: 40px;
+}
+
+.total-cost h3 {
+    font-size: 24px;
+    color: #000;
+}
+
+/* Футер */
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #000;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-content a {
+    color: #e82127;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .configurator-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .config-options h1 {
+        font-size: 28px;
+    }
+}
